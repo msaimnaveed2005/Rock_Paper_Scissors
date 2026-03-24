@@ -15,4 +15,21 @@ function getComputerChoice() {
         console.log("SCISSORS");
     }
 }
+function getHumanChoice()
+{
+    let user_value=prompt("Enter your move: ");
+    if(user_value=="R")
+    {
+        console.log("ROCK");
+    }
+    else if(user_value=="P")
+    {
+        console.log("PAPER");
+    }
+    else if(user_value=="S")
+    {
+        console.log("SCISSORS");
+    }
+}
+getHumanChoice();
 getComputerChoice();
