@@ -18,19 +18,26 @@ function getComputerChoice() {
 }
 function getHumanChoice()
 {
-    let user_value=prompt("Enter your move: ");
-    if(user_value=="R")
+    let user_value = prompt("Enter your move: ");
+    user_value = user_value.toLowerCase(); // convert to lowercase
+
+    if(user_value == "rock")
     {
         console.log("ROCK");
     }
-    else if(user_value=="P")
+    else if(user_value == "paper")
     {
         console.log("PAPER");
     }
-    else if(user_value=="S")
+    else if(user_value == "scissors")
     {
         console.log("SCISSORS");
     }
+}
+
+function PlayRound(humanChoice,computerChoice)
+{
+
 }
 getHumanChoice();
 getComputerChoice();
