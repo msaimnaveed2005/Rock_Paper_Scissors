@@ -1,4 +1,4 @@
-let humanScore=0,computerScore=0;
+
 function getComputerChoice() 
 {
     let value;
@@ -36,7 +36,11 @@ function getHumanChoice()
     }
 }
 
-function PlayRound(humanChoice, computerChoice)
+
+
+function playGame()
+{
+  function PlayRound(humanChoice, computerChoice)
 {
     if(humanChoice == computerChoice)
     {
@@ -78,12 +82,8 @@ function PlayRound(humanChoice, computerChoice)
         console.log("INVALID INPUT");
     }
 }
-
-function playGame()
-{
-    
+  let humanScore=0,computerScore=0;
 }
 const humanChoice=getHumanChoice();
 const computerChoice=getComputerChoice();
-
 PlayRound(humanChoice,computerChoice);
