@@ -1,30 +1,43 @@
-# Rock_Paper_Scissors
-# 🪨📄✂️ Rock Paper Scissors (Console Game)
+# Rock Paper Scissors (Console-Based JavaScript Game)
 
-## 📌 Overview
+## Overview
 
-This is a simple **Rock, Paper, Scissors** game implemented in **JavaScript**, played entirely in the **browser console** using `prompt()` and `console.log()`.
+This project is a simple **Rock, Paper, Scissors** game built using **JavaScript**, where the entire gameplay runs in the **browser console**.
 
-The game allows a human player to compete against the computer for **5 rounds**, with scores tracked and a final winner announced at the end.
-
----
-
-## 🚀 Features
-
-* 🎮 Play against the computer
-* 🔁 5-round game loop
-* 📊 Score tracking (Human vs Computer)
-* 📢 Round-by-round results
-* 🏆 Final winner declaration
-* 🧪 Includes a simple **Hello World test** before the game starts
+The game is played between a human user and the computer for **5 rounds**, and the final winner is घोषित based on the scores.
 
 ---
 
-## 🛠️ How It Works
+## Project Structure
 
-### 1. Hello World Test
+```
+Rock-Paper-Scissors
+ ┣ 📜 index.html
+ ┗ 📜 logic.js
+```
 
-Before the game starts, a simple **Hello World** message is executed to verify that the script is running correctly.
+---
+
+## Initial Test (Hello World)
+
+Before the game starts, a simple test is executed in `index.html`:
+
+```javascript
+console.log("Hello World");
+```
+
+This ensures that the JavaScript environment is working correctly before running the game.
+
+---
+
+## How the Game Works
+
+### 1. Game Start
+
+* The script `logic.js` is linked to `index.html`
+* The function `playGame()` is automatically executed
+
+---
 
 ### 2. Player Input
 
@@ -33,106 +46,121 @@ Before the game starts, a simple **Hello World** message is executed to verify t
   * `rock`
   * `paper`
   * `scissors`
-* Input is case-insensitive (e.g., `Rock`, `ROCK`, `rock` all work)
+* Input is converted to lowercase to make it **case-insensitive**
+
+---
 
 ### 3. Computer Choice
 
-* The computer randomly selects:
+* The computer generates a random number using `Math.random()`
+* Based on the value, it selects:
 
   * ROCK
   * PAPER
   * SCISSORS
 
-### 4. Game Logic
+---
 
-* The game compares both choices and determines:
+### 4. Round Logic
 
-  * Winner of the round
+* Each round:
+
+  * Displays both choices in the console
+  * Determines the winner
   * Updates scores accordingly
 
-### 5. Game Loop
+Example:
 
-* The game runs for **5 rounds**
-* After each round:
-
-  * Choices are displayed
-  * Winner is announced
-  * Scores are updated
-
-### 6. Final Result
-
-* After 5 rounds:
-
-  * Final scores are displayed
-  * Overall winner is घोषित 🎉
+```
+Human chose: ROCK
+Computer chose: SCISSORS
+ROCK beats SCISSORS.
+```
 
 ---
 
-## 🧑‍💻 Technologies Used
+### 5. Game Loop
 
+* The game runs for **5 rounds** using a `for` loop
+* Scores are tracked using:
+
+```javascript
+let humanScore = 0, computerScore = 0;
+```
+
+---
+
+### 6. Final Result
+
+After 5 rounds:
+
+* Final scores are displayed
+* Overall winner is announced
+
+Example:
+
+```
+----- FINAL SCORE -----
+HUMAN SCORE: 3
+COMPUTER SCORE: 2
+HUMAN WINS THE GAME!
+```
+
+---
+
+## Technologies Used
+
+* HTML
 * JavaScript (Vanilla)
 * Browser Console (`prompt`, `console.log`)
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
-1. Open your browser (Chrome recommended)
-2. Open Developer Tools:
+1. Download or clone the repository
+2. Open `index.html` in your browser
+3. Open Developer Tools:
 
    * Right click → Inspect → Console
-3. Copy and paste the script
-4. Run the function:
-
-   ```javascript
-   playGame();
-   ```
+4. Follow the prompts to play the game
 
 ---
 
-## 📷 Example Output
+## Concepts Practiced
 
-```
-Human chose: ROCK
-Computer chose: SCISSORS
-ROCK beats SCISSORS. HUMAN WINS!
-
-Score → Human: 1 | Computer: 0
-----------------------
-
-FINAL SCORE → HUMAN: 3 | COMPUTER: 2
-🎉 HUMAN WINS THE GAME!
-```
-
----
-
-## 📚 Learning Purpose
-
-This project was built to practice:
-
-* Functions
-* Conditional logic
-* Loops
+* Functions and modular code
+* Conditional statements (`if-else`)
+* Loops (`for`)
+* Random number generation
 * User input handling
-* Basic game design
+* Basic game logic
 
 ---
 
-## 🔮 Future Improvements
+## Limitations
 
-* Add GUI (buttons instead of prompt)
-* Add animations and styling
-* Keep score across multiple games
-* Improve input validation
-
----
-
-## 🙌 Acknowledgment
-
-This project is part of learning JavaScript fundamentals and building logic through small interactive games.
+* No graphical interface (console-based only)
+* Uses `prompt()` for input (browser dependent)
+* Limited input validation
 
 ---
 
-## 📌 Author
+## Future Improvements
+
+* Add a graphical user interface (buttons & UI)
+* Replace `prompt()` with event-based input
+* Display results on the webpage instead of console
+* Add replay option
+
+---
+
+## Author
 
 **Muhammad Saim Naveed**
+
+---
+
+## Acknowledgment
+
+This project is part of learning JavaScript fundamentals and building logic through small interactive games.
