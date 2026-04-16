@@ -88,12 +88,26 @@ function playGame()
   let humanScore=0,computerScore=0;
   let humanChoice;
   let computerChoice;
-  for(let i=0;i<5;i++)
+  /*for(let i=0;i<5;i++)
   {
     humanChoice=getHumanChoice();
     computerChoice=getComputerChoice();
     PlayRound(humanChoice,computerChoice);
-  }
+  }*/
+    computerChoice=getComputerChoice();
+    const rockbtn=document.querySelector("#rock");
+    const paperbtn=document.querySelector("#paper");
+    const scissorsbtn=document.querySelector("#scissors");
+
+    rockbtn.addEventListener("click",()=>{
+        PlayRound("Rock",computerChoice);
+    });
+    paperbtn.addEventListener("click",()=>{
+        PlayRound("Paper",computerChoice);
+    });
+    scissorsbtnbtn.addEventListener("click",()=>{
+        PlayRound("Scissors",computerChoice);
+    });
   console.log("----- FINAL SCORE -----");
   console.log("HUMAN SCORE:",humanScore);
   console.log("COMPUTER SCORE:",computerScore);
