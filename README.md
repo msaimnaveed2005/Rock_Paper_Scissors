@@ -4,7 +4,7 @@
 
 This project is a simple **Rock, Paper, Scissors** game built using **JavaScript**, where the entire gameplay runs in the **browser console**.
 
-The game is played between a human user and the computer for **5 rounds**, and the final winner is घोषित based on the scores.
+The game is played between a human user and the computer for **5 rounds**, and the final winner is based on the scores.
 
 ---
 
